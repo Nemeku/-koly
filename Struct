@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+struct zlomek
+{
+int citatel, jmenovatel;
+}
+
+void vypis_zlomek(zlomek z)
+{
+	cout << z.citatel << "/" << z.jmenovatel;
+}
+
+int vytvor_zlomek(int citatel,int jmenovatel)
+{
+	zlomek z;
+	z.citatel = citatel;
+	z.jmenovatel = jmenovatel;
+	vypis_zlomek(z);
+	return 0;
+}
+
+int main()
+{
+	zlomek z;
+	int citatel, jmenovatel;
+	cout << "Zadej citatel: ";
+	cin >> citatel;	
+	cout << "Zadej jmenovatel: ";
+	cin >> jmenovatel;
+	vytvor_zlomek(citatel, jmenovatel);
+	return 0;
+}
